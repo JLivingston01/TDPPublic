@@ -29,8 +29,7 @@ def main():
     None.
 
     """
-    logging.info('''Script began at
-        %s''',
+    logging.info("Script began at %s",
         dt.datetime.strftime(dt.datetime.today(),"%Y-%m-%d %H:%M:%S"))
 
 
@@ -52,9 +51,8 @@ def main():
                receivers=receivers,password=password,port=port)
 
 
-    logging.info('''Script finished at
-        %s''',
-        dt.datetime.strftime(dt.datetime.today(),"%Y-%m-%d %H:%M:%S")''')
+    logging.info("Script finished at %s",
+        dt.datetime.strftime(dt.datetime.today(),"%Y-%m-%d %H:%M:%S"))
 
 
 
