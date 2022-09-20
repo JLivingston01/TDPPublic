@@ -1,3 +1,4 @@
+"""Defining EmailClient Class"""
 import smtplib
 import ssl
 
