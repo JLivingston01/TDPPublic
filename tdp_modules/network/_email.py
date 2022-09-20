@@ -2,7 +2,7 @@ import smtplib
 import ssl
 
 
-class email_client:
+class EmailClient:
     """
     An emailing client using google's SMTP server.
     """
@@ -13,6 +13,7 @@ class email_client:
         self.sender = sender
         self.password=password
         self.port=port
+        self.server=None
 
     def __authenticate__(self):
 

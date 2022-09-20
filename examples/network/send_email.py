@@ -2,13 +2,13 @@ import datetime as dt
 import logging
 import os
 from dotenv import load_dotenv
-from tdp_modules.network import email_client
+from tdp_modules.network import EmailClient
 
 def send_email(message,sender,receivers,password,port) -> None:
     """
     A function to use the email_client class.
     """
-    email_client_ = email_client(sender = sender,
+    email_client_ = EmailClient(sender = sender,
                                  port=port,
                                  password=password)
     email_client_.send_message(message=message,

@@ -1,1 +1,1 @@
-from ._email import email_client
+from ._email import EmailClient
