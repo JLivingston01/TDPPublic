@@ -7,6 +7,10 @@ from tdp_modules.network import EmailClient
 def send_email(message,sender,receivers,password,port) -> None:
     """
     A function to use the email_client class.
+    
+    Returns
+    -------
+    None.
     """
     email_client_ = EmailClient(sender = sender,
                                  port=port,
@@ -16,7 +20,14 @@ def send_email(message,sender,receivers,password,port) -> None:
 
 
 def main():
+    """
+    The main method of this example.
 
+    Returns
+    -------
+    None.
+
+    """
     logging.info(f'''Script began at
         {dt.datetime.strftime(dt.datetime.today(),"%Y-%m-%d %H:%M:%S")}''')
 
