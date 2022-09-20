@@ -1,7 +1,7 @@
 import datetime as dt
 import logging
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
 from tdp_modules.network import email_client
 
 def send_email(message,sender,receivers,password,port) -> None:

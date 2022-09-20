@@ -12,7 +12,7 @@ class LinearRegression:
     include an intercept in any x matrix used for fit and predict.
     """
     def __init__(self):
-        return None
+        self.coef_ = None
 
     def fit(self,x,y):
         self.coef_ = np.linalg.pinv(x.T@x)@(x.T@y)
