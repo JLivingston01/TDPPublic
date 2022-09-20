@@ -14,7 +14,7 @@ class LinearRegression:
     def __init__(self):
         self.coef_ = None
 
-    def fit(self,X,Y):
+    def fit(self, X, Y):
         """
         Fit a linear regression.
 
@@ -33,7 +33,7 @@ class LinearRegression:
         self.coef_ = np.linalg.pinv(X.T@X)@(X.T@Y)
         return self
 
-    def predict(self,X):
+    def predict(self, X):
         """
         Predict with fitted model
 
