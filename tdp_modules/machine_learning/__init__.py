@@ -1,3 +1,3 @@
-from _linear_models import (
+from ._linear_models import (
     LinearRegression
     )

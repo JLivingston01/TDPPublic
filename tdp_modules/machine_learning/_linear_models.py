@@ -14,15 +14,15 @@ class LinearRegression:
     def __init__(self):
         self.coef_ = None
 
-    def fit(self,x,y):
+    def fit(self,X,Y):
         """
         Fit a linear regression.
 
         Parameters
         ----------
-        x : np.array or pd.DataFrame
+        X : np.array or pd.DataFrame
             Matix or regression inputs.
-        y : pd.Series, np.array or pd.DataFrame
+        Y : pd.Series, np.array or pd.DataFrame
             Regression target.
 
         Returns
@@ -30,16 +30,16 @@ class LinearRegression:
         Self
 
         """
-        self.coef_ = np.linalg.pinv(x.T@x)@(x.T@y)
+        self.coef_ = np.linalg.pinv(X.T@X)@(X.T@Y)
         return self
 
-    def predict(self,x):
+    def predict(self,X):
         """
         Predict with fitted model
 
         Parameters
         ----------
-        x : np.array or pd.DataFrame
+        X : np.array or pd.DataFrame
             Matix or regression inputs.
 
         Returns
@@ -47,4 +47,4 @@ class LinearRegression:
         np.array
 
         """
-        return x@self.coef_
+        return X@self.coef_
