@@ -1,3 +1,4 @@
+"""Example of email class implementation"""
 import datetime as dt
 import logging
 import os

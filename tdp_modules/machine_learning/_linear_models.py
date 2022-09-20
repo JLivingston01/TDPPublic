@@ -1,3 +1,4 @@
+"""Defining Linear Model Classes"""
 import numpy as np
 
 class LinearRegression:
