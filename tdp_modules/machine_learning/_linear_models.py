@@ -15,8 +15,36 @@ class LinearRegression:
         self.coef_ = None
 
     def fit(self,x,y):
+        """
+        Fit a linear regression.
+
+        Parameters
+        ----------
+        x : np.array or pd.DataFrame
+            Matix or regression inputs.
+        y : pd.Series, np.array or pd.DataFrame
+            Regression target.
+
+        Returns
+        -------
+        Self
+
+        """
         self.coef_ = np.linalg.pinv(x.T@x)@(x.T@y)
         return self
 
     def predict(self,x):
+        """
+        Predict with fitted model
+
+        Parameters
+        ----------
+        x : np.array or pd.DataFrame
+            Matix or regression inputs.
+
+        Returns
+        -------
+        np.array
+
+        """
         return x@self.coef_
