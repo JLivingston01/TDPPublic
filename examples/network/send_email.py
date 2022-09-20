@@ -7,7 +7,7 @@ from tdp_modules.network import EmailClient
 def send_email(message,sender,receivers,password,port) -> None:
     """
     A function to use the email_client class.
-    
+
     Returns
     -------
     None.
