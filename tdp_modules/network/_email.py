@@ -1,4 +1,5 @@
-import smtplib, ssl
+import smtplib
+import ssl
 
 
 class email_client:
