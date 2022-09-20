@@ -5,14 +5,15 @@ from dotenv import load_dotenv
 import os
 
 def send_email(message,sender,receivers,password,port) -> None:
-
+    """
+    A function to use the email_client class.
+    """
     email_client_ = email_client(sender = sender,
                                  port=port,
                                  password=password)
-    email_client_.send_message(message=message, 
+    email_client_.send_message(message=message,
                                receivers=receivers)
 
-    return None
 
 def main():
 
@@ -41,7 +42,7 @@ def main():
     logging.info(f'''Script finished at
         {dt.datetime.strftime(dt.datetime.today(),"%Y-%m-%d %H:%M:%S")}''')
 
-    return None
+
 
 if __name__=="__main__":
 
